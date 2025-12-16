@@ -51,7 +51,7 @@ const HomePage: React.FC = () => {
 function App() {
   return (
     <TrainingProvider>
-      <Router>
+      <Router basename="/LYR_L-D">
         <div className="app">
           <header className="app-header">
             <h1>🎓 System Zarządzania Szkoleniami HR</h1>
