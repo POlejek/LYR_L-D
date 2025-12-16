@@ -95,6 +95,9 @@ npm run dev
 http://localhost:5173
 ```
 
+Albo użyj wersji online:
+🌐 **https://polejek.github.io/LYR_L-D/**
+
 ## 🛠️ Dostępne Komendy
 
 ```bash
@@ -102,6 +105,18 @@ npm run dev      # Uruchom serwer deweloperski
 npm run build    # Zbuduj wersję produkcyjną
 npm run preview  # Podgląd wersji produkcyjnej
 ```
+
+## 💾 Eksport i Import Danych
+
+Aplikacja posiada funkcjonalność eksportu i importu danych w formacie JSON:
+
+- **📥 Eksportuj do JSON** - pobiera plik z wszystkimi szkoleniami i uczestnikami
+- **📤 Importuj z JSON** - wczytuje dane z wcześniej wyeksportowanego pliku
+
+Dane są przechowywane lokalnie w przeglądarce. Używaj eksportu do:
+- Tworzenia kopii zapasowych
+- Przenoszenia danych między przeglądarkami/urządzeniami
+- Udostępniania danych innym użytkownikom
 
 ## 📂 Struktura Projektu
 
@@ -112,6 +127,7 @@ src/
 │   ├── TrainingList.tsx              # Lista szkoleń
 │   ├── ParticipantManagement.tsx    # Zarządzanie uczestnikami
 │   ├── ParticipantStats.tsx         # Dashboard statystyk uczestników
+│   ├── DataExportImport.tsx         # Eksport/Import danych JSON
 │   └── *.css                         # Style komponentów
 ├── context/             # Context API
 │   └── TrainingContext.tsx          # Stan aplikacji
@@ -158,6 +174,18 @@ Aplikacja posiada dwie główne zakładki:
 3. Sprawdź szczegółową tabelę z danymi każdego uczestnika
 4. Kliknij "Pokaż" w kolumnie "Lista szkoleń", aby rozwinąć szczegóły
 5. Zobacz kluczowe wskaźniki na dole strony
+
+### Eksport i Import Danych
+
+**Eksport:**
+1. Kliknij przycisk "📥 Eksportuj do JSON" u góry strony
+2. Plik JSON z wszystkimi danymi zostanie automatycznie pobrany
+3. Nazwa pliku zawiera datę eksportu (np. `szkolenia-export-2025-12-16.json`)
+
+**Import:**
+1. Kliknij przycisk "📤 Importuj z JSON"
+2. Wybierz wcześniej wyeksportowany plik JSON
+3. Dane zostaną wczytane i zastąpią obecne dane w aplikacji
 
 ### Usuwanie
 
@@ -211,9 +239,33 @@ Aplikacja posiada dwie główne zakładki:
 }
 ```
 
+## � GitHub Pages Deployment
+
+Aplikacja jest automatycznie deployowana na GitHub Pages przy każdym push do brancha `main`.
+
+**URL produkcyjny:** https://polejek.github.io/LYR_L-D/
+
+### Jak to działa:
+
+1. GitHub Actions automatycznie buduje aplikację po każdym push
+2. Pliki produkcyjne są deployowane do branch `gh-pages`
+3. GitHub Pages serwuje aplikację z tego brancha
+
+### Manualne włączenie GitHub Pages:
+
+Jeśli to pierwsza instalacja, musisz włączyć GitHub Pages w ustawieniach:
+
+1. Przejdź do Settings → Pages
+2. W sekcji "Source" wybierz "GitHub Actions"
+3. Zapisz zmiany
+4. Workflow automatycznie zbuduje i wdroży aplikację
+
 ## 🔮 Przyszłe Rozszerzenia
 
 - ✅ ~~Dashboard z podsumowaniami i statystykami~~ (Zrealizowane!)
+- ✅ ~~Eksport danych do JSON~~ (Zrealizowane!)
+- ✅ ~~Import danych z JSON~~ (Zrealizowane!)
+- ✅ ~~Deployment na GitHub Pages~~ (Zrealizowane!)
 - Eksport danych do Excel/PDF
 - Filtrowanie i wyszukiwanie szkoleń
 - Wykresy i wizualizacje danych (Chart.js)
