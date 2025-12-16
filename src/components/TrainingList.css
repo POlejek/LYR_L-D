@@ -1,0 +1,139 @@
+.training-list-container {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.list-header h2 {
+  color: #2d3748;
+  font-size: 1.75rem;
+}
+
+.training-count {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #718096;
+}
+
+.empty-state p {
+  margin-bottom: 0.5rem;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.training-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.training-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.training-table th,
+.training-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.training-table th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.training-table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.training-table tbody tr:hover {
+  background-color: #f7fafc;
+}
+
+.training-table .cost {
+  font-weight: 600;
+  color: #38a169;
+}
+
+.training-table .date-range {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.training-table .participants-count {
+  text-align: center;
+  font-weight: 600;
+  color: #4299e1;
+}
+
+.training-table .actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+
+/* Responsywność */
+@media (max-width: 1024px) {
+  .training-table {
+    font-size: 0.8rem;
+  }
+
+  .training-table th,
+  .training-table td {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .training-list-container {
+    padding: 1rem;
+  }
+
+  .list-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .training-table {
+    font-size: 0.75rem;
+  }
+
+  .training-table th,
+  .training-table td {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .training-table .actions {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .training-table .btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+  }
+}

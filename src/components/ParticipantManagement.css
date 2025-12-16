@@ -1,0 +1,175 @@
+.participant-management {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.page-header {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.page-header h2 {
+  color: #2d3748;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.training-info {
+  background: #f7fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.training-info p {
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+.training-info p:last-child {
+  margin-bottom: 0;
+}
+
+.participant-form-container {
+  background: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.participant-form-container h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.participant-form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.participant-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.participant-form .checkbox-group {
+  justify-content: center;
+}
+
+.participant-form .checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.participant-form .checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.participant-form .checkbox-group span {
+  font-weight: 600;
+}
+
+.participants-list {
+  margin-top: 2rem;
+}
+
+.participants-list h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.participants-list .empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #718096;
+  font-style: italic;
+}
+
+.participants-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.participants-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.participants-table th,
+.participants-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.participants-table th {
+  font-weight: 600;
+}
+
+.participants-table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.participants-table tbody tr:hover {
+  background-color: #f7fafc;
+}
+
+.participants-table .actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.attendance-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.attendance-badge.confirmed {
+  background: #c6f6d5;
+  color: #22543d;
+}
+
+.attendance-badge.pending {
+  background: #fed7d7;
+  color: #742a2a;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .participant-management {
+    padding: 1rem;
+  }
+
+  .page-header {
+    flex-direction: column;
+  }
+
+  .participant-form .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .participants-table {
+    font-size: 0.875rem;
+  }
+
+  .participants-table th,
+  .participants-table td {
+    padding: 0.75rem 0.5rem;
+  }
+}
